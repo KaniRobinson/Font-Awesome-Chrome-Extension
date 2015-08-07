@@ -71,6 +71,20 @@ header ul.nav li.search input{
     text-indent: 5px;
     color: #565656;
 }
+header ul.nav a.redirect:hover::before{
+    content: "\f005";
+    color: #BFBF38;
+}
+
+header ul.nav a.redirect{
+    text-decoration: none;
+    height: 100%;
+    line-height: 45px;
+    color: #565656;
+    font-size: 20px;
+    float: right;
+    margin: 0px 15px;
+}
 
 header ul.nav li.menu{
     width: 45px;
@@ -80,6 +94,7 @@ header ul.nav li.menu{
 ul.iconContainer {
     width: 90%;
     margin: 0px auto;
+    padding-bottom: 115px;
 }
 ul.iconContainer li.title {
     width: 100%;
@@ -106,4 +121,37 @@ ul.iconContainer li {
     text-align: center;
     font-size: 22px;
     margin: 0px 8px 9px 0px;
+}
+ul.iconContainer li:not(.title):hover{
+    background-color: #9C9C9C;
+    color: #FFF;
+    cursor:pointer;
+}
+div.iconPreview {
+    position: fixed;
+    bottom: 0;
+    height: 115px;
+    background-color: #ebebeb;
+    width: 100%;
+    border-top: 1px solid #9C9C9C;
+}
+div.iconPreview div.icon{
+    width: 115px;
+    height: 115px;
+    line-height: 115px;
+    text-align: center;
+    font-size: 50px;
+    color: #9C9C9C;
+}
+div.iconPreview div.class{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 115px;
+    height: 115px;
+    width: calc(100% - 116px);
+    margin: 0px 0px 0px -4px;
+    font-size: 26px;
+    text-align: left;
+    font-weight: 600;
+    color: #9C9C9C;
 }
