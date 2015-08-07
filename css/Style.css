@@ -1,0 +1,109 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    vertical-align: baseline; 
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block; 
+}
+
+body {
+    width: 400px;
+    min-height: 500px;
+    background: #FFF;
+}
+
+ol, ul {
+    list-style: none; 
+}
+
+blockquote, q {
+    quotes: none; 
+}
+
+blockquote {
+    &:before, &:after {
+        content: '';
+        content: none; 
+    }
+}
+
+q {
+    &:before, &:after {
+        content: '';
+        content: none; 
+    }
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; 
+}
+
+header{
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #9C9C9C;
+    margin-bottom: 15px;
+}
+
+header ul.nav{
+    width: 100%;
+    height: 100%;
+}
+
+header ul.nav li{
+    height:100%;
+    line-height: 45px;
+    color: #565656;
+    font-size: 20px;
+}
+
+header ul.nav li.search input{
+    height: 89%;
+    padding: 0;
+    border: 0;
+    font-size: 17px;
+    text-indent: 5px;
+    color: #565656;
+}
+
+header ul.nav li.menu{
+    width: 45px;
+    text-align: center;
+}
+
+ul.iconContainer {
+    width: 90%;
+    margin: 0px auto;
+}
+ul.iconContainer li.title {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 23px;
+    text-align: left;
+    color: #000;
+    border-radius: 0;
+    border: none;
+    margin: 0 0 20px 0;
+}
+ul.iconContainer li.title small {
+    font-size: 13px;
+    color: #CCC;
+}
+ul.iconContainer li {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color: #9C9C9C;
+    border-radius: 5px;
+    border: 1px solid #9C9C9C;
+    text-align: center;
+    font-size: 22px;
+    margin: 0px 8px 9px 0px;
+}
