@@ -5,7 +5,6 @@ Font.Api = {
 	}
 } 
 Font.Api.JQuery();
-$(document).ready(function(){
 
 	Font.Functions = {
 
@@ -22,7 +21,7 @@ $(document).ready(function(){
 
 		RegExCall: function(Title, data, RegEx, prefix, appendfix){
 
-			$("ul.iconContainer").prepend("<li class='title'>" + Title + " <small>(123 icons)</small></li>");
+			$("ul.iconContainer").prepend("<li class='title'>" + Title + " <small>(674 icons)</small></li>");
 
 			var match = RegEx.exec(data);
 
@@ -30,6 +29,11 @@ $(document).ready(function(){
 			    match = RegEx.exec(data);
 			    $("ul.iconContainer").append("<li search='" + match[1] + "' class='"+ prefix + match[1] + appendfix + "'></li>");
 			}
+		},
+
+		Count: function(){
+
+			$("ul.iconContainer li.title small").html("(" + $("ul.iconContainer li").length + " icons)");
 
 		}
 	}
@@ -106,8 +110,39 @@ $(document).ready(function(){
 
 	}
 
+	Font.Preview = {
+
+		Public: {
+			icon: null,
+		},
+
+		__CONSTRUCT: function(){
+			$(document).on("click", "ul.iconContainer li", function(){
+
+				Font.Preview.Remove();
+
+				Font.Preview.Public.icon = $(this).attr("class");
+
+				Font.Preview.Create(Font.Preview.Public.icon);
+
+				Font.Functions.Count();
+
+			});
+		},
+
+		Remove: function(){
+			$(".iconPreview").remove();
+		},
+
+		Create: function(icon){
+			$("body").append("<div class='iconPreview'><div class='icon " + icon + "'></div><div class='class'>" + icon + "</div></div>")
+		}
+	}
+
+
+$(function(){
+	Font.Preview.__CONSTRUCT();
 	Font.Search.__CONSTRUCT();
 	Font.Awesome.__CONSTRUCT();
-
-});
+})
 
